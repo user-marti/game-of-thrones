@@ -1,7 +1,7 @@
 abstract class Entitat {
-    protected String nom;
-    protected int nivell;
-    protected int puntsVida;
+    private String nom;
+    private int nivell;
+    private int puntsVida;
 
     public Entitat(String n, int lvl, int pV) {
         this.nom = n;
@@ -10,6 +10,11 @@ abstract class Entitat {
     }
 
     public abstract int atacar(int forsa, String tipus);
+
+    // NOM
+    public int getNom() { return nom}
+
+    public void setNom(String n) { this.nom = n; }
 
     // NIVELL
     public int millorarNivell() {
@@ -35,7 +40,13 @@ abstract class Entitat {
         return puntsVida;
     }
 
-    public void setPuntsVida(int recPV) {
-        this.puntsVida = recPV;
+    public void setPuntsVida(int vida) {
+
+        if (vida < 0) {
+            this.PuntsVida = 0;
+        } else {
+            this.puntsVida = vida;
+        }
+
     }
 }
