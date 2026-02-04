@@ -1,10 +1,15 @@
 class Guerrer extends Entitat {
-    public Guerrer(String n, int lvl, int pV) {
+    private int resistencia;
+
+    public Guerrer(String n, int lvl, int pV, int res) {
         super(n, lvl, pV);
+        this.resistencia = res;
     }
 
     @Override
     public int atacar(int forsa, String tipus) {
-        int atacFisic = forsa * nivell;
+        int atacFisic = forsa * this.getNivell();
+        System.out.println(getNom() + " a fet " + atacFisic + " de dany.");
+        return atacFisic;
     }
 }
