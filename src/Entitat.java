@@ -3,16 +3,15 @@ abstract class Entitat {
     private int nivell;
     private int puntsVida;
 
+    // CONSTRUCTOR
     public Entitat(String n, int lvl, int pV) {
         this.nom = n;
         this.nivell = lvl;
         this.puntsVida = pV;
     }
 
-    public abstract int atacar(int forsa, String tipus);
-
     // NOM
-    public int getNom() { return nom}
+    public String getNom() { return nom}
 
     public void setNom(String n) { this.nom = n; }
 
@@ -36,17 +35,23 @@ abstract class Entitat {
         return this.puntsVida;
     }
 
-    public int getPuntsVida() {
-        return puntsVida;
+    public int getPuntsVida() { return puntsVida;
     }
 
     public void setPuntsVida(int vida) {
-
         if (vida < 0) {
             this.PuntsVida = 0;
         } else {
             this.puntsVida = vida;
         }
+    }
 
+    // FUNCIO ATACAR
+    public abstract int atacar(int forsa, String tipus);
+
+    // REBRE DANY
+    public void rebreDany (int quantitat) {
+        System.out.println(getNom() + " a rebut " + quantitat + " de dany.");
+        this.puntsVida -= quantitat;
     }
 }

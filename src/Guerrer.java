@@ -6,6 +6,11 @@ class Guerrer extends Entitat {
         this.resistencia = res;
     }
 
+    // RESISTENCIA
+    public int getResistencia() { return resistencia; }
+
+    public void setResistencia( int res ) { this.resistencia = res; }
+
     @Override
     public int atacar(int forsa, String tipus) {
         int atacFisic = forsa * this.getNivell();
