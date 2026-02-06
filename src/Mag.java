@@ -1,4 +1,4 @@
-class Mag extends Entitat {
+public class Mag extends Entitat {
     private int mana;
 
     public Mag(String n, int lvl, int pv, int mana) {
@@ -7,15 +7,15 @@ class Mag extends Entitat {
     }
 
     // MANA GETTER I SETTER
-    public int getMana() { return mana; }
+    public int getMana() { return this.mana; }
 
     public void setMana(int m) {
-        this.mana = m;
-        if (this.mana > 100) {
-            this.mana = 100;
-        } else if (this.mana < 0) {
-            this.mana = 0;
+        if (m > 100) {
+            m = 100;
+        } else if (m < 0) {
+            m = 0;
         }
+        this.mana = m;
     }
 
     // ATACS DE MANA

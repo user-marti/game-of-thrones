@@ -7,15 +7,15 @@ class Guerrer extends Entitat {
     }
 
     // RESISTENCIA GETTER I SETTER
-    public float getResistencia() { return resistencia; }
+    public float getResistencia() { return this.resistencia; }
 
     public void setResistencia( int res ) {
-        this.resistencia = res;
-        if (this.resistencia > 5) {
-            this.resistencia = 5;
-        } else if (this.resistencia < 0) {
-            this.resistencia = 0;
+        if (res > 5) {
+            res = 5;
+        } else if (res < 0) {
+            res = 0;
         }
+        this.resistencia = res;
     }
 
     @Override
