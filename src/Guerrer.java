@@ -9,7 +9,7 @@ class Guerrer extends Entitat {
     // RESISTENCIA GETTER I SETTER
     public float getResistencia() { return this.resistencia; }
 
-    public void setResistencia( int res ) {
+    public void setResistencia(int res) {
         if (res > 5) {
             res = 5;
         } else if (res < 0) {
