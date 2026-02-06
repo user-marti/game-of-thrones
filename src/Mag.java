@@ -48,3 +48,9 @@ class Mag extends Entitat {
     public int atacar(int forsa) {
         return atacNormal(forsa);
     }
+
+    @Override
+    public void rebreDany(int quantitat) {
+        super.setPuntsVida(super.getPuntsVida() - quantitat);
+    }
+}
