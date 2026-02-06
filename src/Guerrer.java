@@ -20,7 +20,7 @@ class Guerrer extends Entitat {
 
     @Override
     public int atacar(int forsa) {
-        if (forsa > 25) forsa = 25;
+        if (forsa > 10) forsa = 10;
         int atacFisic = forsa * super.getNivell();
         System.out.println(super.getNom() + " a fet " + atacFisic + " de dany.");
         return atacFisic;

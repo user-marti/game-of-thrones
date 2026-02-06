@@ -20,6 +20,7 @@ public class Monstre extends Entitat {
 
     @Override
     public int atacar(int forsa) {
+        if (forsa > 5) forsa = 5;
         int atacSalvatge = forsa * this.salvatge;
         System.out.println(super.getNom() + " a fet " + atacSalvatge + " de dany.");
         return atacSalvatge;
