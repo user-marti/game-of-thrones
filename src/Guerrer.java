@@ -6,7 +6,7 @@ class Guerrer extends Entitat {
         setResistencia(res);
     }
 
-    // RESISTENCIA
+    // RESISTENCIA GETTER I SETTER
     public float getResistencia() { return resistencia; }
 
     public void setResistencia( int res ) {
@@ -19,18 +19,18 @@ class Guerrer extends Entitat {
     }
 
     @Override
-    public int atacar(int forsa, String tipus) {
-        int atacFisic = forsa * getNivell();
-        System.out.println(getNom() + " a fet " + atacFisic + " de dany.");
+    public int atacar(int forsa) {
+        int atacFisic = forsa * super.getNivell();
+        System.out.println(super.getNom() + " a fet " + atacFisic + " de dany.");
         return atacFisic;
     }
 
     @Override
     public void rebreDany (int quantitat) {
-        float descompte = this.resistencia / 10;
-        int danyEstalviat = (int) (quantitat * descompte);
+        float descompte = this.resistencia / 10.0f;
+        float danyEstalviat = (quantitat * descompte);
 
-        int vidaNova = getPuntsVida() - (quantitat - danyEstalviat);
-        setPuntsVida(vidaNova);
+        float vidaNova = super.getPuntsVida() - (quantitat - danyEstalviat);
+        super.setPuntsVida(vidaNova);
     }
 }
