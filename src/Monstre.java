@@ -24,4 +24,9 @@ public class Monstre extends Entitat {
         System.out.println(super.getNom() + " a fet " + atacSalvatge + " de dany.");
         return atacSalvatge;
     }
+
+    @Override
+    public void rebreDany (int quantitat) {
+        super.setPuntsVida(super.getPuntsVida() - quantitat);
+    }
 }
