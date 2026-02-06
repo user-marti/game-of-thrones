@@ -1,13 +1,13 @@
 class Guerrer extends Entitat {
     private float resistencia;
 
-    public Guerrer(String n, int lvl, int pV, int res) {
-        super(n, lvl, pV);
+    public Guerrer(String n, int lvl, int pv, int res) {
+        super(n, lvl, pv);
         setResistencia(res);
     }
 
     // RESISTENCIA
-    public int getResistencia() { return resistencia; }
+    public float getResistencia() { return resistencia; }
 
     public void setResistencia( int res ) {
         this.resistencia = res;

@@ -11,7 +11,7 @@ abstract class Entitat {
     }
 
     // NOM
-    public String getNom() { return nom}
+    public String getNom() { return nom; }
 
     public void setNom(String n) { this.nom = n; }
 
@@ -40,7 +40,7 @@ abstract class Entitat {
 
     public void setPuntsVida(int vida) {
         if (vida < 0) {
-            this.PuntsVida = 0;
+            this.puntsVida = 0;
         } else {
             this.puntsVida = vida;
         }
@@ -49,7 +49,7 @@ abstract class Entitat {
     // FUNCIO ATACAR
     public abstract int atacar(int forsa, String tipus);
 
-    // REBRE DANY
+    // FUNCIO REBRE DANY
     public void rebreDany (int quantitat) {
         System.out.println(getNom() + " a rebut " + quantitat + " de dany.");
         this.puntsVida -= quantitat;
