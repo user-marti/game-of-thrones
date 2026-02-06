@@ -24,10 +24,10 @@ public class Mag extends Entitat {
         int costMana = 10;
         if (this.mana >= costMana) {
             this.mana -= costMana;
-            System.out.println(getNom() + " a llençat un encanteri!");
+            System.out.println(super.getNom() + " a llençat un encanteri!");
             return forsa;
         } else {
-            System.out.println(getNom() + " no te suficient mana per llençar l'atac...");
+            System.out.println(super.getNom() + " no te suficient mana per llençar l'atac...");
             return 0;
         }
     }
@@ -38,10 +38,10 @@ public class Mag extends Entitat {
         if (this.mana >= costMana) {
             this.mana -= costMana;
             int dany = forsa * 2;
-            System.out.println(getNom() + " a llençat un encanteri fort!");
+            System.out.println(super.getNom() + " a llençat un encanteri fort!");
             return dany;
         } else {
-            System.out.println(getNom() + " no te suficient mana per llençar l'atac...");
+            System.out.println(super.getNom() + " no te suficient mana per llençar l'atac...");
             return 0;
         }
     }

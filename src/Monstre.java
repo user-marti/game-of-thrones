@@ -17,4 +17,11 @@ public class Monstre extends Entitat {
         }
         this.salvatge = svg;
     }
+
+    @Override
+    public int atacar(int forsa) {
+        int atacSalvatge = forsa * this.salvatge;
+        System.out.println(super.getNom() + " a fet " + atacSalvatge + " de dany.");
+        return atacSalvatge;
+    }
 }
