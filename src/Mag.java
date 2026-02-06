@@ -20,6 +20,7 @@ class Mag extends Entitat {
 
     // ATACS DE MANA
     public int atacNormal(int forsa) {
+        if (forsa > 25) forsa = 25;
         int costMana = 10;
         if (this.mana >= costMana) {
             this.mana -= costMana;
@@ -32,6 +33,7 @@ class Mag extends Entitat {
     }
 
     public int atacFort(int forsa) {
+        if (forsa > 25) forsa = 25;
         int costMana = 30;
         if (this.mana >= costMana) {
             this.mana -= costMana;
